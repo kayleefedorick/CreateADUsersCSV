@@ -1,5 +1,5 @@
 ﻿#Set home directory
-$HomePath="\\KAYLEEDC\HomeDir$\%username"
+$HomePath="\\KAYLEEDC\HomeDir$\%username%"
 $HomeLetter="H:"
 
 #Find the domain to create UPN later
