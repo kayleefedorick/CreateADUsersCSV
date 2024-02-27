@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="n1ixy4MJmiEQD9G7ovB8k1DnV4rBPZcg8UwwLHKsjoQ" />
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Create AD Users from CSV | CreateADUsersCSV</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Kaylee Fedorick - Create AD Users from CSV" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Create Active Directory user accounts from a CSV file." />
+<meta property="og:description" content="Create Active Directory user accounts from a CSV file." />
+<link rel="canonical" href="https://kayleefedorick.github.io/CreateADUsersCSV/" />
+<meta property="og:url" content="https://kayleefedorick.github.io/CreateADUsersCSV/" />
+<meta property="og:site_name" content="CreateADUsersCSV" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Create AD Users from CSV" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Create Active Directory user accounts from a CSV file.","headline":"Create AD Users from CSV","name":"CreateADUsersCSV","url":"https://kayleefedorick.github.io/CreateADUsersCSV/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/CreateADUsersCSV/assets/css/style.css?v=eec95ef90b45fe02233fde632b1f603a73152fac">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/CreateADUsersCSV/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://github.com/kayleefedorick">Kaylee Fedorick</a> / <a href="https://github.com/kayleefedorick/CreateADUsersCSV">CreateADUsersCSV</a></h1>
+      
+
+      <h1 id="create-ad-users-from-csv">Create AD Users from CSV</h1>
+
+<p>This PowerShell script automates creating Active Directory users by importing their data from a CSV file. The user’s logon name will be created using their first initial and last name. The script will generate a 10-character random password for each user. The password must be changed at first logon.</p>
+
+<p>Modify the script to set the location of your CSV file and home directories for the user accounts. An example CSV file is provided.</p>
+
+<p>The script will also make the users members of a group named “Users - Staff” and move the users into an OU named “Staff”. Modify this as needed.</p>
+
+<p>If the Username already exists, it will be skipped and an error will be displayed.</p>
+
+<p>Tested with PowerShell Version 5.1 on Windows Server 2016.</p>
+
+<h2 id="example-output">Example output:</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FirstName LastName  Email                     Phone      Description        Expires
+--------- --------  -----                     -----      -----------        -------
+Merve     MacGowan  mmacgowan@betterguitar.co 5874862965 Software Developer 120    
+Pasi      Anand     panand@betterguitar.co    5872051946 Web Developer      120    
+Jaci      Schroeter schroeter@betterguitar.co 7801843726 SEO Specialist     120    
+Corinna   Wetzel    cwetzel@betterguitar.co   5872931273 Data Scientist     365    
+Anu       Uberti    auberti@betterguitar.co   5879281634 Media Consultant   120    
+
+
+5 rows of user data imported.
+User mmacgowan created with password iku9vUELIK
+User panand created with password NqVtCEgv1d
+User jschroeter created with password Zbi5Dn2Vx9
+User cwetzel created with password NM5UsrW9wS
+User auberti created with password tAfB2ZJCwp
+</code></pre></div></div>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
